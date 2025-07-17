@@ -1,0 +1,816 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Makefile与CMake · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ros-2-ji-qi-ren-cao-zuo-xi-tong.html" />
+    
+    
+    <link rel="prev" href="git-yu-github.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Welcome!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">About us</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../about-us/robomaster-bi-sai-jian-jie.html">
+            
+                <a href="../about-us/robomaster-bi-sai-jian-jie.html">
+            
+                    
+                    RoboMaster 比赛简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../about-us/ji-qi-ren-ji-ge-bing-zhong-jian-jie.html">
+            
+                <a href="../about-us/ji-qi-ren-ji-ge-bing-zhong-jian-jie.html">
+            
+                    
+                    机器人及各兵种简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../cang-qiong-zhan-dui-jian-jie.html">
+            
+                <a href="../cang-qiong-zhan-dui-jian-jie.html">
+            
+                    
+                    苍穹战队简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../shi-jue-zu-jian-jie.html">
+            
+                <a href="../shi-jue-zu-jian-jie.html">
+            
+                    
+                    视觉组简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../ji-suan-ji-ji-chu-zhi-shi/wei-shen-me-yao-liao-jie-ji-suan-ji-ji-chu-zhi-shi.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/wei-shen-me-yao-liao-jie-ji-suan-ji-ji-chu-zhi-shi.html">
+            
+                    
+                    为什么要了解计算机基础知识？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../ji-suan-ji-ji-chu-zhi-shi/shu-ju-jie-gou-yu-suan-fa.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/shu-ju-jie-gou-yu-suan-fa.html">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../ji-suan-ji-ji-chu-zhi-shi/cao-zuo-xi-tong.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/cao-zuo-xi-tong.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../ji-suan-ji-ji-chu-zhi-shi/ji-suan-ji-wang-luo.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/ji-suan-ji-wang-luo.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../gong-gong-zi-yuan.html">
+            
+                <a href="../gong-gong-zi-yuan.html">
+            
+                    
+                    公共资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">语言基础与工程能力</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../yu-yan-ji-chu-yu-gong-cheng-neng-li/python-ru-men.html">
+            
+                <a href="../yu-yan-ji-chu-yu-gong-cheng-neng-li/python-ru-men.html">
+            
+                    
+                    python 入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../yu-yan-ji-chu-yu-gong-cheng-neng-li/cc++-ru-men.html">
+            
+                <a href="../yu-yan-ji-chu-yu-gong-cheng-neng-li/cc++-ru-men.html">
+            
+                    
+                    C/C++ 入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    项目工程化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="git-yu-github.html">
+            
+                <a href="git-yu-github.html">
+            
+                    
+                    Git与Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.1.2" data-path="makefile-yu-cmake.html">
+            
+                <a href="makefile-yu-cmake.html">
+            
+                    
+                    Makefile与CMake
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../ros-2-ji-qi-ren-cao-zuo-xi-tong.html">
+            
+                <a href="../ros-2-ji-qi-ren-cao-zuo-xi-tong.html">
+            
+                    
+                    Ros 2 机器人操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">相机、标定与坐标变换</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.html">
+            
+                <a href="../xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.html">
+            
+                    
+                    相机基本参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机视觉基础（传统算法）</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../ji-suan-ji-shi-jue-ji-chu-chuan-tong-suan-fa/ji-suan-ji-shi-jue-jian-jie-chuan-tong-suan-fa.html">
+            
+                <a href="../ji-suan-ji-shi-jue-ji-chu-chuan-tong-suan-fa/ji-suan-ji-shi-jue-jian-jie-chuan-tong-suan-fa.html">
+            
+                    
+                    计算机视觉简介（传统算法）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../opencv-jian-jie.html">
+            
+                <a href="../opencv-jian-jie.html">
+            
+                    
+                    OpenCV简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">人工智能概述</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../ren-gong-zhi-neng-gai-shu/ren-gong-zhi-neng-gai-shu.html">
+            
+                <a href="../ren-gong-zhi-neng-gai-shu/ren-gong-zhi-neng-gai-shu.html">
+            
+                    
+                    人工智能概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../ji-qi-xue-xi.html">
+            
+                <a href="../ji-qi-xue-xi.html">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../shen-du-xue-xi/">
+            
+                <a href="../shen-du-xue-xi/">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.2.1" data-path="../shen-du-xue-xi/conda.html">
+            
+                <a href="../shen-du-xue-xi/conda.html">
+            
+                    
+                    conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2.2" data-path="../shen-du-xue-xi/cuda-yu-pytorch.html">
+            
+                <a href="../shen-du-xue-xi/cuda-yu-pytorch.html">
+            
+                    
+                    CUDA与pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2.3" data-path="../shen-du-xue-xi/mo-xing-liang-hua-yu-bu-shu.html">
+            
+                <a href="../shen-du-xue-xi/mo-xing-liang-hua-yu-bu-shu.html">
+            
+                    
+                    模型量化与部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../qiang-hua-xue-xi.html">
+            
+                <a href="../qiang-hua-xue-xi.html">
+            
+                    
+                    强化学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机视觉进阶（深度学习）</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../ji-suan-ji-shi-jue-jin-jie-shen-du-xue-xi/ji-yu-shen-du-xue-xi-de-ji-suan-ji-shi-jue-gai-shu.html">
+            
+                <a href="../ji-suan-ji-shi-jue-jin-jie-shen-du-xue-xi/ji-yu-shen-du-xue-xi-de-ji-suan-ji-shi-jue-gai-shu.html">
+            
+                    
+                    基于深度学习的计算机视觉概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">目标追踪与状态预测</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../mu-biao-zhui-zong-yu-zhuang-tai-yu-ce/mu-biao-zhui-zong-yu-yu-ce-jian-jie.html">
+            
+                <a href="../mu-biao-zhui-zong-yu-zhuang-tai-yu-ce/mu-biao-zhui-zong-yu-yu-ce-jian-jie.html">
+            
+                    
+                    目标追踪与预测简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">SLAM基础</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../slam-ji-chu/slam-jian-jie.html">
+            
+                <a href="../slam-ji-chu/slam-jian-jie.html">
+            
+                    
+                    SLAM简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Makefile与CMake</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="makefile&#x4E0E;cmake">Makefile&#x4E0E;CMake</h1>
+<p>&#x5728; RoboMaster &#x89C6;&#x89C9;&#x7EC4;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5E38;&#x4F7F;&#x7528; C/C++ &#x7F16;&#x5199;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x3001;&#x901A;&#x4FE1;&#x3001;&#x786C;&#x4EF6;&#x63A7;&#x5236;&#x7B49;&#x6A21;&#x5757;&#x3002;&#x4E3A;&#x4E86;&#x9AD8;&#x6548;&#x7BA1;&#x7406;&#x8FD9;&#x4E9B;&#x6E90;&#x6587;&#x4EF6;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;<strong>&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#xFF08;Build System&#xFF09;</strong> &#x5C31;&#x663E;&#x5F97;&#x5C24;&#x4E3A;&#x91CD;&#x8981;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5DE5;&#x5177;&#x5C31;&#x662F; <strong>Makefile &#x4E0E; CMake</strong>&#x3002;</p>
+<hr>
+<h2 id="makefile&#xFF1A;&#x4F20;&#x7EDF;&#x7684;&#x81EA;&#x52A8;&#x6784;&#x5EFA;&#x5DE5;&#x5177;">Makefile&#xFF1A;&#x4F20;&#x7EDF;&#x7684;&#x81EA;&#x52A8;&#x6784;&#x5EFA;&#x5DE5;&#x5177;</h2>
+<p><strong>&#x4EC0;&#x4E48;&#x662F; Makefile&#xFF1F;</strong></p>
+<p><strong>Makefile</strong> &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6307;&#x5BFC; <code>make</code> &#x5DE5;&#x5177;&#x5982;&#x4F55;&#x7F16;&#x8BD1;&#x5DE5;&#x7A0B;&#x6587;&#x4EF6;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x7F16;&#x8BD1;&#x89C4;&#x5219;&#x3001;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x4E0E;&#x6784;&#x5EFA;&#x65B9;&#x5F0F;&#x3002;</p>
+<p><strong>&#x7ED3;&#x6784;&#x793A;&#x4F8B;&#xFF1A;</strong></p>
+<pre><code class="lang-make"># &#x7F16;&#x8BD1;&#x5668;
+CC = g++
+CFLAGS = -Wall -g
+
+# &#x6E90;&#x6587;&#x4EF6;&#x4E0E;&#x76EE;&#x6807;&#x6587;&#x4EF6;
+SRC = main.cpp camera.cpp detect.cpp
+OBJ = $(SRC:.cpp=.o)
+TARGET = vision_app
+
+# &#x9ED8;&#x8BA4;&#x6784;&#x5EFA;&#x76EE;&#x6807;
+$(TARGET): $(OBJ)
+    $(CC) $(OBJ) -o $(TARGET)
+
+# &#x6E05;&#x9664;&#x6784;&#x5EFA;&#x6587;&#x4EF6;
+clean:
+    rm -f $(OBJ) $(TARGET)
+</code></pre>
+<p><strong>&#x4F18;&#x70B9;&#xFF1A;</strong></p>
+<ul>
+<li>&#x7B80;&#x6D01;&#x3001;&#x7075;&#x6D3B;&#xFF0C;&#x9002;&#x5408;&#x5C0F;&#x578B;&#x5DE5;&#x7A0B;&#xFF1B;</li>
+<li>&#x53EF;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x6BCF;&#x4E00;&#x6B65;&#x6784;&#x5EFA;&#x6D41;&#x7A0B;&#x3002;</li>
+</ul>
+<p><strong>&#x5C40;&#x9650;&#xFF1A;</strong></p>
+<ul>
+<li>&#x8DE8;&#x5E73;&#x53F0;&#x56F0;&#x96BE;&#xFF0C;Windows/Linux &#x8BED;&#x6CD5;&#x7565;&#x6709;&#x5DEE;&#x5F02;&#xFF1B;</li>
+<li>&#x96BE;&#x4EE5;&#x7BA1;&#x7406;&#x5927;&#x578B;&#x9879;&#x76EE;&#xFF0C;&#x624B;&#x52A8;&#x5199;&#x4F9D;&#x8D56;&#x7E41;&#x7410;&#x3002;</li>
+</ul>
+<hr>
+<h2 id="cmake&#xFF1A;&#x73B0;&#x4EE3;&#x5316;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;">CMake&#xFF1A;&#x73B0;&#x4EE3;&#x5316;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;</h2>
+<p><strong>&#x4EC0;&#x4E48;&#x662F; CMake&#xFF1F;</strong></p>
+<p><strong>CMake</strong> &#x662F;&#x4E00;&#x79CD;&#x9AD8;&#x7EA7;&#x7684;&#x3001;&#x8DE8;&#x5E73;&#x53F0;&#x7684;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;&#x751F;&#x6210;&#x5668;&#x3002;&#x5B83;&#x80FD;&#x6839;&#x636E; <code>CMakeLists.txt</code> &#x6587;&#x4EF6;<strong>&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x5E73;&#x53F0;&#x7684; Makefile &#x6216; Visual Studio &#x5DE5;&#x7A0B;&#x6587;&#x4EF6;</strong>&#x3002;</p>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x7528; CMake&#xFF1F;</strong></p>
+<ul>
+<li>&#x8DE8;&#x5E73;&#x53F0;&#xFF08;Linux&#x3001;Windows&#x3001;macOS&#xFF09;&#xFF1B;</li>
+<li>&#x81EA;&#x52A8;&#x5904;&#x7406;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1B;</li>
+<li>&#x652F;&#x6301;&#x5927;&#x578B;&#x5DE5;&#x7A0B;&#x6A21;&#x5757;&#x7EC4;&#x7EC7;&#xFF1B;</li>
+<li>&#x4E0E; ROS&#x3001;OpenCV&#x3001;Eigen &#x7B49;&#x5E93;&#x65E0;&#x7F1D;&#x96C6;&#x6210;&#xFF1B;</li>
+<li>&#x53EF;&#x4EE5;&#x751F;&#x6210; Makefile&#x3001;Ninja&#x3001;Visual Studio &#x5DE5;&#x7A0B;&#x7B49;&#x591A;&#x79CD;&#x540E;&#x7AEF;&#x6784;&#x5EFA;&#x811A;&#x672C;&#x3002;</li>
+</ul>
+<p><strong>&#x793A;&#x4F8B;&#xFF1A;&#x7B80;&#x5355;&#x7684; CMakeLists.txt</strong></p>
+<pre><code class="lang-cmake"><span class="hljs-keyword">cmake_minimum_required</span>(VERSION <span class="hljs-number">3.10</span>)
+<span class="hljs-keyword">project</span>(vision_app)
+
+<span class="hljs-comment"># &#x4F7F;&#x7528; C++17</span>
+<span class="hljs-keyword">set</span>(CMAKE_CXX_STANDARD <span class="hljs-number">17</span>)
+
+<span class="hljs-comment"># &#x67E5;&#x627E;&#x4F9D;&#x8D56;&#x5E93;&#xFF08;&#x5982; OpenCV&#xFF09;</span>
+<span class="hljs-keyword">find_package</span>(OpenCV REQUIRED)
+<span class="hljs-keyword">include_directories</span>(<span class="hljs-variable">${OpenCV_INCLUDE_DIRS}</span>)
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x6E90;&#x6587;&#x4EF6;</span>
+<span class="hljs-keyword">add_executable</span>(vision_app main.cpp camera.cpp detect.cpp)
+
+<span class="hljs-comment"># &#x94FE;&#x63A5;&#x5E93;</span>
+<span class="hljs-keyword">target_link_libraries</span>(vision_app <span class="hljs-variable">${OpenCV_LIBS}</span>)
+</code></pre>
+<p>&#x6784;&#x5EFA;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-bash">mkdir build
+<span class="hljs-built_in">cd</span> build
+cmake ..
+make
+</code></pre>
+<hr>
+<h2 id="makefile-vs-cmake">Makefile vs. CMake</h2>
+<table>
+<thead>
+<tr>
+<th>&#x6BD4;&#x8F83;&#x7EF4;&#x5EA6;</th>
+<th>Makefile</th>
+<th>CMake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x8DE8;&#x5E73;&#x53F0;</td>
+<td>&#x5426;&#xFF08;&#x624B;&#x52A8;&#x5904;&#x7406;&#xFF09;</td>
+<td>&#x2705; &#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x6784;&#x5EFA;&#x7CFB;&#x7EDF;</td>
+</tr>
+<tr>
+<td>&#x9002;&#x5408;&#x9879;&#x76EE;&#x89C4;&#x6A21;</td>
+<td>&#x5C0F;&#x578B;&#x9879;&#x76EE;</td>
+<td>&#x4E2D;&#x5927;&#x578B;&#x9879;&#x76EE;&#xFF0C;&#x6A21;&#x5757;&#x5316;&#x3001;&#x53EF;&#x6269;&#x5C55;</td>
+</tr>
+<tr>
+<td>&#x6613;&#x7528;&#x6027;</td>
+<td>&#x9700;&#x8981;&#x624B;&#x5199;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;</td>
+<td>&#x81EA;&#x52A8;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#xFF0C;&#x7ED3;&#x6784;&#x6E05;&#x6670;</td>
+</tr>
+<tr>
+<td>&#x4E3B;&#x6D41;&#x652F;&#x6301;</td>
+<td>&#x2705; &#x88AB;&#x652F;&#x6301;</td>
+<td>&#x2705; &#x88AB;&#x652F;&#x6301;&#xFF0C;ROS&#x3001;OpenCV &#x7B49;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="&#x63A8;&#x8350;&#x5B66;&#x4E60;&#x8D44;&#x6E90;">&#x63A8;&#x8350;&#x5B66;&#x4E60;&#x8D44;&#x6E90;</h2>
+<p> <strong>&#x6587;&#x6863;&#x6559;&#x7A0B;</strong></p>
+<ul>
+<li><a href="https://cmake.org/documentation/" target="_blank">CMake &#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/897692888725344" target="_blank">Makefile &#x6559;&#x7A0B;&#xFF08;&#x5ED6;&#x96EA;&#x5CF0;&#xFF09;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="git-yu-github.html" class="navigation navigation-prev " aria-label="Previous page: Git与Github">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ros-2-ji-qi-ren-cao-zuo-xi-tong.html" class="navigation navigation-next " aria-label="Next page: Ros 2 机器人操作系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"icon":"hammer","title":"Makefile与CMake","level":"7.1.2","depth":2,"next":{"title":"Ros 2 机器人操作系统","level":"7.2","depth":1,"path":"ros-2-ji-qi-ren-cao-zuo-xi-tong.md","ref":"ros-2-ji-qi-ren-cao-zuo-xi-tong.md","articles":[]},"previous":{"title":"Git与Github","level":"7.1.1","depth":2,"path":"xiang-mu-gong-cheng-hua/git-yu-github.md","ref":"xiang-mu-gong-cheng-hua/git-yu-github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"xiang-mu-gong-cheng-hua/makefile-yu-cmake.md","mtime":"2025-07-17T14:04:02.383Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-17T15:05:59.636Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

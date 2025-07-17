@@ -1,0 +1,751 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>计算机视觉简介（传统算法） · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../opencv-jian-jie.html" />
+    
+    
+    <link rel="prev" href="../xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Welcome!
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">About us</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../about-us/robomaster-bi-sai-jian-jie.html">
+            
+                <a href="../about-us/robomaster-bi-sai-jian-jie.html">
+            
+                    
+                    RoboMaster 比赛简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../about-us/ji-qi-ren-ji-ge-bing-zhong-jian-jie.html">
+            
+                <a href="../about-us/ji-qi-ren-ji-ge-bing-zhong-jian-jie.html">
+            
+                    
+                    机器人及各兵种简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../cang-qiong-zhan-dui-jian-jie.html">
+            
+                <a href="../cang-qiong-zhan-dui-jian-jie.html">
+            
+                    
+                    苍穹战队简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../shi-jue-zu-jian-jie.html">
+            
+                <a href="../shi-jue-zu-jian-jie.html">
+            
+                    
+                    视觉组简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机基础知识</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../ji-suan-ji-ji-chu-zhi-shi/wei-shen-me-yao-liao-jie-ji-suan-ji-ji-chu-zhi-shi.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/wei-shen-me-yao-liao-jie-ji-suan-ji-ji-chu-zhi-shi.html">
+            
+                    
+                    为什么要了解计算机基础知识？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../ji-suan-ji-ji-chu-zhi-shi/shu-ju-jie-gou-yu-suan-fa.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/shu-ju-jie-gou-yu-suan-fa.html">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../ji-suan-ji-ji-chu-zhi-shi/cao-zuo-xi-tong.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/cao-zuo-xi-tong.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../ji-suan-ji-ji-chu-zhi-shi/ji-suan-ji-wang-luo.html">
+            
+                <a href="../ji-suan-ji-ji-chu-zhi-shi/ji-suan-ji-wang-luo.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../gong-gong-zi-yuan.html">
+            
+                <a href="../gong-gong-zi-yuan.html">
+            
+                    
+                    公共资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">语言基础与工程能力</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../yu-yan-ji-chu-yu-gong-cheng-neng-li/python-ru-men.html">
+            
+                <a href="../yu-yan-ji-chu-yu-gong-cheng-neng-li/python-ru-men.html">
+            
+                    
+                    python 入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../yu-yan-ji-chu-yu-gong-cheng-neng-li/cc++-ru-men.html">
+            
+                <a href="../yu-yan-ji-chu-yu-gong-cheng-neng-li/cc++-ru-men.html">
+            
+                    
+                    C/C++ 入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../xiang-mu-gong-cheng-hua/">
+            
+                <a href="../xiang-mu-gong-cheng-hua/">
+            
+                    
+                    项目工程化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../xiang-mu-gong-cheng-hua/git-yu-github.html">
+            
+                <a href="../xiang-mu-gong-cheng-hua/git-yu-github.html">
+            
+                    
+                    Git与Github
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../xiang-mu-gong-cheng-hua/makefile-yu-cmake.html">
+            
+                <a href="../xiang-mu-gong-cheng-hua/makefile-yu-cmake.html">
+            
+                    
+                    Makefile与CMake
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../ros-2-ji-qi-ren-cao-zuo-xi-tong.html">
+            
+                <a href="../ros-2-ji-qi-ren-cao-zuo-xi-tong.html">
+            
+                    
+                    Ros 2 机器人操作系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">相机、标定与坐标变换</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.html">
+            
+                <a href="../xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.html">
+            
+                    
+                    相机基本参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机视觉基础（传统算法）</li>
+        
+        
+    
+        <li class="chapter active" data-level="9.1" data-path="ji-suan-ji-shi-jue-jian-jie-chuan-tong-suan-fa.html">
+            
+                <a href="ji-suan-ji-shi-jue-jian-jie-chuan-tong-suan-fa.html">
+            
+                    
+                    计算机视觉简介（传统算法）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../opencv-jian-jie.html">
+            
+                <a href="../opencv-jian-jie.html">
+            
+                    
+                    OpenCV简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">人工智能概述</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../ren-gong-zhi-neng-gai-shu/ren-gong-zhi-neng-gai-shu.html">
+            
+                <a href="../ren-gong-zhi-neng-gai-shu/ren-gong-zhi-neng-gai-shu.html">
+            
+                    
+                    人工智能概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../ji-qi-xue-xi.html">
+            
+                <a href="../ji-qi-xue-xi.html">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="../shen-du-xue-xi/">
+            
+                <a href="../shen-du-xue-xi/">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.2.1" data-path="../shen-du-xue-xi/conda.html">
+            
+                <a href="../shen-du-xue-xi/conda.html">
+            
+                    
+                    conda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2.2" data-path="../shen-du-xue-xi/cuda-yu-pytorch.html">
+            
+                <a href="../shen-du-xue-xi/cuda-yu-pytorch.html">
+            
+                    
+                    CUDA与pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2.3" data-path="../shen-du-xue-xi/mo-xing-liang-hua-yu-bu-shu.html">
+            
+                <a href="../shen-du-xue-xi/mo-xing-liang-hua-yu-bu-shu.html">
+            
+                    
+                    模型量化与部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="../qiang-hua-xue-xi.html">
+            
+                <a href="../qiang-hua-xue-xi.html">
+            
+                    
+                    强化学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">计算机视觉进阶（深度学习）</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../ji-suan-ji-shi-jue-jin-jie-shen-du-xue-xi/ji-yu-shen-du-xue-xi-de-ji-suan-ji-shi-jue-gai-shu.html">
+            
+                <a href="../ji-suan-ji-shi-jue-jin-jie-shen-du-xue-xi/ji-yu-shen-du-xue-xi-de-ji-suan-ji-shi-jue-gai-shu.html">
+            
+                    
+                    基于深度学习的计算机视觉概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">目标追踪与状态预测</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../mu-biao-zhui-zong-yu-zhuang-tai-yu-ce/mu-biao-zhui-zong-yu-yu-ce-jian-jie.html">
+            
+                <a href="../mu-biao-zhui-zong-yu-zhuang-tai-yu-ce/mu-biao-zhui-zong-yu-yu-ce-jian-jie.html">
+            
+                    
+                    目标追踪与预测简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">SLAM基础</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../slam-ji-chu/slam-jian-jie.html">
+            
+                <a href="../slam-ji-chu/slam-jian-jie.html">
+            
+                    
+                    SLAM简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >计算机视觉简介（传统算法）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x7B80;&#x4ECB;&#xFF08;&#x4F20;&#x7EDF;&#x7B97;&#x6CD5;&#xFF09;">&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x7B80;&#x4ECB;&#xFF08;&#x4F20;&#x7EDF;&#x7B97;&#x6CD5;&#xFF09;</h1>
+<p>&#x5728;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x5C1A;&#x672A;&#x5E7F;&#x6CDB;&#x5E94;&#x7528;&#x4E4B;&#x524D;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x4E3B;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;&#x4EBA;&#x5DE5;&#x8BBE;&#x8BA1;&#x7684;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x7B97;&#x6CD5;&#x548C;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x65B9;&#x6CD5;&#xFF0C;&#x88AB;&#x7EDF;&#x79F0;&#x4E3A;<strong>&#x4F20;&#x7EDF;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x6280;&#x672F;</strong>&#x3002;&#x5728; RoboMaster &#x6BD4;&#x8D5B;&#x7B49;&#x5BF9;&#x5B9E;&#x65F6;&#x6027;&#x548C;&#x7A33;&#x5B9A;&#x6027;&#x6709;&#x9AD8;&#x8981;&#x6C42;&#x7684;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x4F20;&#x7EDF;&#x89C6;&#x89C9;&#x65B9;&#x6CD5;&#x4ECD;&#x5177;&#x6709;&#x4E0D;&#x53EF;&#x66FF;&#x4EE3;&#x7684;&#x4F18;&#x52BF;&#x3002;&#x672C;&#x7AE0;&#x5C06;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x4F20;&#x7EDF;&#x89C6;&#x89C9;&#x5904;&#x7406;&#x6280;&#x672F;&#xFF0C;&#x4E3A;&#x540E;&#x7EED;&#x56FE;&#x50CF;&#x8BC6;&#x522B;&#x4E0E;&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x5960;&#x5B9A;&#x57FA;&#x7840;&#x3002;</p>
+<h2 id="&#x56FE;&#x50CF;&#x9884;&#x5904;&#x7406;">&#x56FE;&#x50CF;&#x9884;&#x5904;&#x7406;</h2>
+<p>&#x56FE;&#x50CF;&#x9884;&#x5904;&#x7406;&#x7684;&#x76EE;&#x7684;&#x662F;&#x63D0;&#x5347;&#x56FE;&#x50CF;&#x8D28;&#x91CF;&#xFF0C;&#x4F7F;&#x5F97;&#x540E;&#x7EED;&#x5904;&#x7406;&#x66F4;&#x7A33;&#x5B9A;&#x6709;&#x6548;&#x3002;&#x5E38;&#x89C1;&#x64CD;&#x4F5C;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><strong>&#x7070;&#x5EA6;&#x5316;&#x4E0E;&#x4E8C;&#x503C;&#x5316;</strong>&#xFF1A;&#x5C06;&#x5F69;&#x8272;&#x56FE;&#x50CF;&#x8F6C;&#x6362;&#x4E3A;&#x7070;&#x5EA6;&#x6216;&#x9ED1;&#x767D;&#x56FE;&#x50CF;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528; Otsu &#x65B9;&#x6CD5;&#x81EA;&#x52A8;&#x9009;&#x62E9;&#x9608;&#x503C;&#xFF1B;</li>
+<li><strong>&#x53BB;&#x566A;&#x4E0E;&#x6EE4;&#x6CE2;</strong>&#xFF1A;&#x91C7;&#x7528;&#x5747;&#x503C;&#x6EE4;&#x6CE2;&#x3001;&#x9AD8;&#x65AF;&#x6EE4;&#x6CE2;&#x6216;&#x4E2D;&#x503C;&#x6EE4;&#x6CE2;&#x53BB;&#x9664;&#x56FE;&#x50CF;&#x566A;&#x58F0;&#xFF1B;</li>
+<li><strong>&#x8FB9;&#x7F18;&#x68C0;&#x6D4B;</strong>&#xFF1A;&#x4F7F;&#x7528; Sobel&#x3001;Laplacian &#x6216; Canny &#x7B97;&#x5B50;&#x63D0;&#x53D6;&#x56FE;&#x50CF;&#x4E2D;&#x7684;&#x8FB9;&#x7F18;&#x7279;&#x5F81;&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x7269;&#x4F53;&#x8F6E;&#x5ED3;&#x8BC6;&#x522B;&#x3002;</li>
+</ul>
+<h2 id="&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x4E0E;&#x63CF;&#x8FF0;&#x5B50;">&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x4E0E;&#x63CF;&#x8FF0;&#x5B50;</h2>
+<p>&#x4F20;&#x7EDF;&#x89C6;&#x89C9;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x662F;&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x548C;&#x56FE;&#x50CF;&#x5339;&#x914D;&#x7684;&#x6838;&#x5FC3;&#x73AF;&#x8282;&#x3002;&#x5B83;&#x65E8;&#x5728;&#x4ECE;&#x56FE;&#x50CF;&#x4E2D;&#x63D0;&#x53D6;&#x5177;&#x6709;&#x7A33;&#x5B9A;&#x6027;&#x548C;&#x5224;&#x522B;&#x529B;&#x7684;&#x5173;&#x952E;&#x70B9;&#x53CA;&#x5176;&#x63CF;&#x8FF0;&#x3002;</p>
+<ul>
+<li><strong>&#x89D2;&#x70B9;&#x68C0;&#x6D4B;</strong>&#xFF1A;&#x5982; Harris &#x6216; Shi-Tomasi &#x7B97;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x68C0;&#x6D4B;&#x56FE;&#x50CF;&#x4E2D;&#x7684;&#x663E;&#x8457;&#x7ED3;&#x6784;&#x53D8;&#x5316;&#x533A;&#x57DF;&#xFF1B;</li>
+<li><strong>&#x5C40;&#x90E8;&#x7279;&#x5F81;&#x63CF;&#x8FF0;&#x5B50;</strong>&#xFF1A;<ul>
+<li><strong>SIFT</strong>&#xFF1A;&#x5C3A;&#x5EA6;&#x4E0D;&#x53D8;&#x7279;&#x5F81;&#x53D8;&#x6362;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x7F29;&#x653E;&#x3001;&#x65CB;&#x8F6C;&#x7B49;&#x53D8;&#x6362;&#xFF1B;</li>
+<li><strong>ORB</strong>&#xFF1A;&#x66F4;&#x8F7B;&#x91CF;&#x3001;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x5B9E;&#x65F6;&#x573A;&#x666F;&#xFF1B;</li>
+<li><strong>FAST + BRIEF</strong>&#xFF1A;&#x9002;&#x5408;&#x8D44;&#x6E90;&#x53D7;&#x9650;&#x8BBE;&#x5907;&#x7684;&#x5FEB;&#x901F;&#x68C0;&#x6D4B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;&#x7279;&#x5F81;&#x5E7F;&#x6CDB;&#x7528;&#x4E8E;&#x88C5;&#x7532;&#x677F;&#x8BC6;&#x522B;&#x3001;&#x76EE;&#x6807;&#x8DDF;&#x8E2A;&#x7B49;&#x4EFB;&#x52A1;&#x4E2D;&#x3002;</p>
+<h2 id="&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x4E0E;&#x56FE;&#x50CF;&#x5339;&#x914D;">&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x4E0E;&#x56FE;&#x50CF;&#x5339;&#x914D;</h2>
+<p>&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4ECE;&#x56FE;&#x50CF;&#x4E2D;&#x8BC6;&#x522B;&#x7279;&#x5B9A;&#x7684;&#x7269;&#x4F53;&#x6216;&#x7ED3;&#x6784;&#x3002;&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><strong>&#x6A21;&#x677F;&#x5339;&#x914D;</strong>&#xFF1A;&#x901A;&#x8FC7;&#x6ED1;&#x52A8;&#x7A97;&#x53E3;&#x4E0E;&#x76EE;&#x6807;&#x6A21;&#x677F;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF1B;</li>
+<li><strong>&#x57FA;&#x4E8E;&#x7279;&#x5F81;&#x70B9;&#x7684;&#x5339;&#x914D;</strong>&#xFF1A;&#x5982;&#x7528; SIFT &#x63D0;&#x53D6;&#x7279;&#x5F81;&#x70B9;&#x5E76;&#x7528; RANSAC &#x8FDB;&#x884C;&#x56FE;&#x50CF;&#x62FC;&#x63A5;&#x6216;&#x76EE;&#x6807;&#x8BC6;&#x522B;&#xFF1B;</li>
+<li><strong>HOG + SVM</strong>&#xFF1A;&#x901A;&#x8FC7;&#x63D0;&#x53D6;&#x65B9;&#x5411;&#x68AF;&#x5EA6;&#x76F4;&#x65B9;&#x56FE;&#x7279;&#x5F81;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x652F;&#x6301;&#x5411;&#x91CF;&#x673A;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#xFF0C;&#x662F;&#x7ECF;&#x5178;&#x7684;&#x884C;&#x4EBA;&#x68C0;&#x6D4B;&#x65B9;&#x6848;&#x3002;</li>
+</ul>
+<p>&#x5728; RoboMaster &#x4E2D;&#xFF0C;&#x8BC6;&#x522B;&#x88C5;&#x7532;&#x677F;&#x3001;&#x6807;&#x7B7E;&#x7B49;&#x76EE;&#x6807;&#x65F6;&#x5E38;&#x7ED3;&#x5408;&#x989C;&#x8272;&#x9608;&#x503C;&#x5206;&#x5272;&#x548C;&#x5F62;&#x72B6;&#x5206;&#x6790;&#x7B49;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x9AD8;&#x6548;&#x68C0;&#x6D4B;&#x3002;</p>
+<h2 id="&#x56FE;&#x50CF;&#x51E0;&#x4F55;&#x4E0E;&#x76F8;&#x673A;&#x6A21;&#x578B;">&#x56FE;&#x50CF;&#x51E0;&#x4F55;&#x4E0E;&#x76F8;&#x673A;&#x6A21;&#x578B;</h2>
+<p>&#x7406;&#x89E3;&#x56FE;&#x50CF;&#x4E0E;&#x771F;&#x5B9E;&#x4E16;&#x754C;&#x4E4B;&#x95F4;&#x7684;&#x51E0;&#x4F55;&#x5173;&#x7CFB;&#x662F;&#x5B9E;&#x73B0;&#x4E09;&#x7EF4;&#x91CD;&#x5EFA;&#x548C;&#x76EE;&#x6807;&#x5B9A;&#x4F4D;&#x7684;&#x5173;&#x952E;&#xFF1A;</p>
+<ul>
+<li><strong>&#x76F8;&#x673A;&#x6807;&#x5B9A;</strong>&#xFF1A;&#x83B7;&#x53D6;&#x76F8;&#x673A;&#x7684;&#x5185;&#x53C2;&#x77E9;&#x9635;&#x4E0E;&#x7578;&#x53D8;&#x53C2;&#x6570;&#xFF0C;&#x662F;&#x51C6;&#x786E;&#x6D4B;&#x91CF;&#x7269;&#x4F53;&#x4F4D;&#x7F6E;&#x7684;&#x524D;&#x63D0;&#xFF1B;</li>
+<li><strong>&#x900F;&#x89C6;&#x6295;&#x5F71;&#x6A21;&#x578B;</strong>&#xFF1A;&#x7528;&#x4E8E;&#x5EFA;&#x7ACB;&#x50CF;&#x7D20;&#x5750;&#x6807;&#x4E0E;&#x4E16;&#x754C;&#x5750;&#x6807;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#xFF1B;</li>
+<li><strong>PNP&#x95EE;&#x9898;&#x6C42;&#x89E3;</strong>&#xFF1A;&#x901A;&#x8FC7;&#x5DF2;&#x77E5;&#x7A7A;&#x95F4;&#x70B9;&#x4E0E;&#x5176;&#x50CF;&#x7D20;&#x70B9;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F30;&#x8BA1;&#x76F8;&#x673A;&#x59FF;&#x6001;&#xFF0C;&#x662F;&#x5B9E;&#x73B0;&#x76EE;&#x6807;&#x8FFD;&#x8E2A;&#x4E0E;&#x6253;&#x51FB;&#x9884;&#x6D4B;&#x7684;&#x57FA;&#x7840;&#x3002;</li>
+</ul>
+<h2 id="&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;&#x7684;&#x4EF7;&#x503C;&#x4E0E;&#x5E94;&#x7528;&#x573A;&#x666F;">&#x4F20;&#x7EDF;&#x65B9;&#x6CD5;&#x7684;&#x4EF7;&#x503C;&#x4E0E;&#x5E94;&#x7528;&#x573A;&#x666F;</h2>
+<p>&#x5C3D;&#x7BA1;&#x6DF1;&#x5EA6;&#x5B66;&#x4E60;&#x5728;&#x56FE;&#x50CF;&#x8BC6;&#x522B;&#x9886;&#x57DF;&#x8868;&#x73B0;&#x5353;&#x8D8A;&#xFF0C;&#x4F46;&#x4F20;&#x7EDF;&#x89C6;&#x89C9;&#x7B97;&#x6CD5;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x4F18;&#x52BF;&#xFF1A;</p>
+<ul>
+<li><strong>&#x7B97;&#x6CD5;&#x8F7B;&#x91CF;</strong>&#xFF0C;&#x9002;&#x5408;&#x5728;&#x8D44;&#x6E90;&#x53D7;&#x9650;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x8BBE;&#x5907;&#xFF08;&#x5982;&#x88C1;&#x5224;&#x7CFB;&#x7EDF;&#x3001;&#x89C6;&#x89C9;&#x524D;&#x7AEF;&#xFF09;&#x4E2D;&#x8FD0;&#x884C;&#xFF1B;</li>
+<li><strong>&#x65E0;&#x9700;&#x5927;&#x89C4;&#x6A21;&#x6570;&#x636E;&#x8BAD;&#x7EC3;</strong>&#xFF0C;&#x5F00;&#x53D1;&#x5468;&#x671F;&#x77ED;&#xFF1B;</li>
+<li><strong>&#x7A33;&#x5B9A;&#x53EF;&#x9760;</strong>&#xFF0C;&#x5728;&#x7ED3;&#x6784;&#x660E;&#x786E;&#x3001;&#x89C4;&#x5219;&#x7A33;&#x5B9A;&#x7684;&#x573A;&#x666F;&#x4E0B;&#x8868;&#x73B0;&#x826F;&#x597D;&#x3002;</li>
+</ul>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5728; RoboMaster &#x6BD4;&#x8D5B;&#x4E2D;&#xFF0C;&#x4F20;&#x7EDF;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x4ECD;&#x5E7F;&#x6CDB;&#x5E94;&#x7528;&#x4E8E;&#x989C;&#x8272;&#x8BC6;&#x522B;&#x3001;&#x5F62;&#x72B6;&#x8FC7;&#x6EE4;&#x3001;&#x88C5;&#x7532;&#x677F;&#x5339;&#x914D;&#x3001;&#x80FD;&#x91CF;&#x673A;&#x5173;&#x68C0;&#x6D4B;&#x7B49;&#x4EFB;&#x52A1;&#x3002;&#x6211;&#x4EEC;&#x5E38;&#x7528;OpenCV&#x7B49;&#x5F00;&#x6E90;&#x5E93;&#x5B9E;&#x73B0;&#x4F20;&#x7EDF;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;&#x65B9;&#x6848;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.html" class="navigation navigation-prev " aria-label="Previous page: 相机基本参数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../opencv-jian-jie.html" class="navigation navigation-next " aria-label="Next page: OpenCV简介">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"icon":"circle-camera","title":"计算机视觉简介（传统算法）","level":"9.1","depth":1,"next":{"title":"OpenCV简介","level":"10.1","depth":1,"path":"opencv-jian-jie.md","ref":"opencv-jian-jie.md","articles":[]},"previous":{"title":"相机基本参数","level":"8.1","depth":1,"path":"xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.md","ref":"xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"}},"file":{"path":"ji-suan-ji-shi-jue-ji-chu-chuan-tong-suan-fa/ji-suan-ji-shi-jue-jian-jie-chuan-tong-suan-fa.md","mtime":"2025-07-17T14:04:02.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-17T15:05:59.636Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
