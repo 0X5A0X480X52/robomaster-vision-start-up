@@ -9,7 +9,6 @@
 
 ***
 
-* [苍穹战队简介](cang-qiong-zhan-dui-jian-jie.md)
 * [视觉组简介](shi-jue-zu-jian-jie.md)
 
 ## 计算机基础知识
@@ -38,6 +37,11 @@
 ## 相机、标定与坐标变换
 
 * [相机基本参数](xiang-ji-biao-ding-yu-zuo-biao-bian-huan/xiang-ji-ji-ben-can-shu.md)
+
+***
+
+* [上下位机通信](shang-xia-wei-ji-tong-xin.md)
+* [坐标变换简介](zuo-biao-bian-huan-jian-jie.md)
 
 ## 计算机视觉基础（传统算法）
 
